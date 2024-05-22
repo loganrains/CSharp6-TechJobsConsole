@@ -64,7 +64,7 @@ namespace TechJobsConsoleAutograded6
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
-                        Console.WriteLine("Search all fields not yet implemented.");
+                        PrintJobs(JobData.FindByValue(searchTerm));
                     }
                     else
                     {
@@ -143,7 +143,6 @@ namespace TechJobsConsoleAutograded6
                 Console.WriteLine("No results");
             } else
             {
-                // Watch out for \n characters when running test
                 for (int i = 0; i < someJobs.Count; i++)
                 {
                     Console.WriteLine(Environment.NewLine + asterisks);
