@@ -64,11 +64,11 @@ namespace TechJobsConsoleAutograded6
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
-                        PrintJobs(JobData.FindByValue(searchTerm));
+                        PrintJobs(JobData.FindByValue(searchTerm.ToLower()));
                     }
                     else
                     {
-                        List<Dictionary<string, string>> searchResults = JobData.FindByColumnAndValue(columnChoice, searchTerm);
+                        List<Dictionary<string, string>> searchResults = JobData.FindByColumnAndValue(columnChoice, searchTerm.ToLower());
                         PrintJobs(searchResults);
                     }
                 }
